@@ -45,4 +45,5 @@ h3 {
 .wrapper {
   height: 100%;
   width: 100%;
+  overflow: hidden;
 }

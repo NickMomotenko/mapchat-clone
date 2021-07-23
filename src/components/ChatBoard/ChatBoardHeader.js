@@ -13,6 +13,7 @@ import { Block, Row } from "../../UI/Layout";
 
 import sizeIcon from "../../assets/icons/size.svg";
 import sortSizeIcon from "../../assets/icons/sort-size.svg";
+import lypaIcon from "../../assets/icons/search.svg";
 
 const ChatBoardHeader = () => {
   const { userData } = useData();
@@ -20,7 +21,7 @@ const ChatBoardHeader = () => {
   return (
     <ChatBoardHeaderWrapp>
       <Icon url={sizeIcon} style={{ marginRight: 24 }} />
-      <Input style={{ marginRight: 17 }} />
+      <Input position="start" icon={lypaIcon} style={{ marginRight: 17 }} />
       <Row style={{ marginRight: 55 }}>
         <Block style={{ marginRight: 12 }}>
           <Avatar user noBlur url={userData.avatar} />

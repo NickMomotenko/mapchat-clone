@@ -5,4 +5,5 @@ export const ChatBoardListWrapp = styled.div`
   border-right: 1px solid #f6f6f8;
   padding-right: 11px;
   padding-top: 30px;
+  overflow-y: scroll;
 `;

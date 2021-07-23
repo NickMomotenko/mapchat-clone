@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+import { v4 as uuid } from "uuid";
+
 import chat_1_avatar from "../assets/avatars/1.png";
 import chat_2_avatar from "../assets/avatars/2.png";
 import chat_3_avatar from "../assets/avatars/3.png";
@@ -91,6 +93,105 @@ const initialChats = [
 
     time: "12:22 AM",
   },
+  {
+    id: 511,
+    user: {
+      fullname: "Caitrin James",
+      avatar: chat_6_avatar,
+      city: "Juliaca",
+    },
+
+    time: "12:22 AM",
+  },
+  {
+    id: 142,
+    user: {
+      fullname: "James Caitrin FF",
+      avatar: chat_7_avatar,
+      city: "Juliaca",
+    },
+
+    time: "12:22 AM",
+  },
+  {
+    id: 1414,
+    user: {
+      fullname: "James Cart",
+      avatar: chat_8_avatar,
+      city: "Juliaca",
+    },
+
+    time: "12:22 AM",
+  },
+];
+
+const initialMessages = [
+  {
+    chat_id: 1,
+    data: [
+      {
+        id: uuid(),
+        text: "I also need it because I need to start mocking things up. Aaron is expecting the prototype for next week.",
+        time: "10:05",
+        isMe: false,
+      },
+      {
+        id: uuid(),
+        user: {},
+        text: "You bet you want to see ",
+        time: "10:05",
+        isMe: true,
+      },
+      {
+        id: uuid(),
+        user: {},
+        text: "The quick bro 😃",
+        time: "10:05",
+        isMe: false,
+      },
+      {
+        id: uuid(),
+        user: {},
+        text: "The quick brown fox jumps🍔😃",
+        time: "10:05",
+        isMe: true,
+      },
+      {
+        id: uuid(),
+        user: {},
+        text: `& Next meeting tomorrow 10.00 AM`,
+        time: "10:05",
+        isMe: false,
+      },
+      {
+        id: uuid(),
+        user: {},
+        time: "10:05",
+        isMe: false,
+        audio: "sfaasfsafsf",
+      },
+      {
+        id: uuid(),
+        user: {},
+        time: "10:05",
+        isMe: true,
+        file: {
+          name: "file_v1.0.zip",
+          size: "12.5 mb",
+        },
+      },
+      {
+        id: uuid(),
+        user: {},
+        time: "10:05",
+        isMe: false,
+        video: {
+          name: "test.mp4",
+          size: "12.5 mb",
+        },
+      },
+    ],
+  },
 ];
 
 const initialUser = {
@@ -106,11 +207,13 @@ export const useData = () => {
 
   const [userData, setUserData] = useState(initialUser);
 
+  const [messages, setMessages] = useState(initialMessages);
+
   const changeActiveChat = (id) => {
     const chat = chats?.find((chat) => chat.id === id);
 
     setActiveChat(chat);
   };
 
-  return { chats, activeChat, userData, changeActiveChat };
+  return { chats, activeChat, userData, messages, changeActiveChat };
 };
