@@ -52,24 +52,4 @@ export const MessageContent = styled.div`
     css`
       background: #effdf6;
     `}
-    
-  ${(props) =>
-    props.audio &&
-    css`
-      background: #fff0e6;
-      position: relative;
-      overflow: hidden;
-
-      &:before {
-        content: "";
-        display: block;
-        height: 100%;
-        width: ${(props) => props.audioPercent && `${props.audioPercent}%`};
-        background: #fed5b8;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 1;
-      }
-    `}
 `;

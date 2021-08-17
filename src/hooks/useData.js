@@ -170,26 +170,26 @@ const initialMessages = [
         isMe: false,
         audio: "sfaasfsafsf",
       },
-      {
-        id: uuid(),
-        user: {},
-        time: "10:05",
-        isMe: true,
-        file: {
-          name: "file_v1.0.zip",
-          size: "12.5 mb",
-        },
-      },
-      {
-        id: uuid(),
-        user: {},
-        time: "10:05",
-        isMe: false,
-        video: {
-          name: "test.mp4",
-          size: "12.5 mb",
-        },
-      },
+      // {
+      //   id: uuid(),
+      //   user: {},
+      //   time: "10:05",
+      //   isMe: true,
+      //   file: {
+      //     name: "file_v1.0.zip",
+      //     size: "12.5 mb",
+      //   },
+      // },
+      // {
+      //   id: uuid(),
+      //   user: {},
+      //   time: "10:05",
+      //   isMe: false,
+      //   video: {
+      //     name: "test.mp4",
+      //     size: "12.5 mb",
+      //   },
+      // },
     ],
   },
 ];

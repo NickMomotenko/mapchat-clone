@@ -30,18 +30,20 @@ const Message = ({ text, file, audio, video, isMe, avatar, time }) => {
             {time}
           </Text>
         </Block>
-        <MessageContent
-          isMe={isMe}
-          file={file}
-          audio={audio}
-          video={video}
-          audioPercent={audioPercent}
-        >
-          {text && <Text color={isMe ? "#000000" : "#fff"}>{text}</Text>}
-          {file && <FileMessage file={file} />}
-          {audio && <AudioMessage audio={audio} />}
-          {video && <VideoMessage video={video} />}
-        </MessageContent>
+        {text && (
+          <MessageContent
+            isMe={isMe}
+            file={file}
+            audio={audio}
+            video={video}
+            audioPercent={audioPercent}
+          >
+            <Text color={isMe ? "#000000" : "#fff"}>{text}</Text>
+          </MessageContent>
+        )}
+        {/* {file && <FileMessage file={file} />} */}
+        {audio && <AudioMessage audio={audio} />}
+        {/* {video && <VideoMessage video={video} />} */}
       </MessageRow>
     </MessageWrapp>
   );

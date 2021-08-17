@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 import { Row } from "../Layout";
-import Text from "../Text";
 
 import playIcon from "../../assets/icons/play.svg";
 import audioPattern from "../../assets/patterns/audio.svg";
@@ -9,6 +8,26 @@ import audioPattern from "../../assets/patterns/audio.svg";
 export const AudioMessageWrapp = styled(Row)`
   position: relative;
   z-index: 1;
+
+  background: #fff0e6;
+  position: relative;
+  overflow: hidden;
+
+  width: 100%;
+  padding: 10px;
+  border-radius: 0px 10px 10px 10px;
+
+  &:before {
+    content: "";
+    display: block;
+    height: 100%;
+    width: ${(props) => (props.width ? `${props.width}%` : "0%")};
+    background: #fed5b8;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
 `;
 
 export const AudioMessageButton = styled.button`
@@ -43,4 +62,11 @@ export const AudioMessageStatus = styled.div`
   margin-left: 10px;
 `;
 
-export const AudioMessageTime = styled(Text)``;
+export const AudioMessageTime = styled.div`
+  color: #000000;
+  min-width: 40px;
+  text-align: right;
+  margin-left: 10px;
+  font-size: 11px;
+  margin-left: 10px;
+`;
